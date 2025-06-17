@@ -21,7 +21,7 @@ import '../../src/App.css';
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1 className="logo">⚡ElectroShop</h1>
+      <h1 className="logo">⚡Electrify</h1>
       <div className="nav-links">
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/about" className="nav-link">About</Link>
