@@ -1,11 +1,3 @@
-// export default function Home() {
-//   return (
-//     <div className="text-center py-20 bg-gray-100">
-//       <h1 className="text-5xl font-bold text-blue-800">Welcome to ElectroShop</h1>
-//       <p className="text-gray-600 mt-4 text-lg">Your trusted source for electrical solutions</p>
-//     </div>
-//   );
-// }
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

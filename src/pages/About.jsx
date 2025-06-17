@@ -8,9 +8,9 @@ export default function About() {
       <div className="about-wrapper">
         <h1 className="about-title">About Us</h1>
         <p className="about-description">
-          <span className="about-highlight">ElectroShop</span> is your trusted destination for high-quality electrical products.
+          <span className="about-highlight">Electrify</span> is your trusted destination for high-quality electrical products.
           We specialize in modern lighting solutions, durable wiring components, and reliable electrical accessories tailored to both
-          residential and commercial needs. With a commitment to innovation and customer satisfaction, ElectroShop is lighting up homes and powering progress across the nation.
+          residential and commercial needs. With a commitment to innovation and customer satisfaction, Electrify is lighting up homes and powering progress across the nation.
         </p>
 
         <div className="about-cards">

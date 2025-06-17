@@ -12,7 +12,7 @@
 //         <div className="bg-white shadow-md rounded-lg p-6 mb-8">
 //           <h2 className="text-xl font-semibold text-blue-800 mb-2">Our Office</h2>
 //           <p className="text-gray-600">123 Electro Street, Bangalore, India</p>
-//           <p className="text-gray-600">Email: support@electroshop.com</p>
+//           <p className="text-gray-600">Email: support@Electrify.com</p>
 //           <p className="text-gray-600">Phone: +91 98765 43210</p>
 //         </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="contact-info">
           <h2 className="contact-info-title">Our Office</h2>
           <p className="contact-info-text">123 Electro Street, Bangalore, India</p>
-          <p className="contact-info-text">Email: support@electroshop.com</p>
+          <p className="contact-info-text">Email: support@electrify.com</p>
           <p className="contact-info-text">Phone: +91 98765 43210</p>
         </div>
 
