@@ -31,7 +31,7 @@ import tableLampImg from "../product-images/table-lamp.jpeg";
 import powerstripImg from "../product-images/power-strip.jpeg";
 import tubeLightImg from "../product-images/tube-light.jpeg";
 import wallSocketImg from "../product-images/wall-socket.jpeg";
-import InverterImg from "../product-images/inverter-battery.jpeg";
+import InverterImg from "../product-images/Inverter-Battery.jpeg";
 import wiringCableImg from "../product-images/wiring-cable.jpeg";
 import electricKettleImg from "../product-images/electric-kettle.jpeg";
 import mcbSwitchImg from "../product-images/mcb-switch.jpeg";
