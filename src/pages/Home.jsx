@@ -96,14 +96,6 @@ export default function Home() {
             Your trusted source for electrical solutions
           </p>
         </div>
-
-        <button
-          className="btn-exploreproduct"
-          onClick={() => navigate("/products")}
-        >
-          Explore Our Products{" "}
-          <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
-        </button>
       </div>
 
       <div className="home-sliding-images">
@@ -115,6 +107,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+
         <button
           className="btn-exploreproduct"
           onClick={() => navigate("/products")}
@@ -173,6 +166,14 @@ export default function Home() {
             <p>Quick turnaround times to keep your projects on track</p>
           </div>
         </div>
+
+        <button
+          className="btn-exploreproduct"
+          onClick={() => navigate("/services")}
+        >
+         Explore What We Offer{" "}
+          <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
+        </button>
 
         <div className="home-stats" data-aos="flip-up">
           <div className="stat-item">
