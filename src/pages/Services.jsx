@@ -1,4 +1,4 @@
-import "../App.css"; // assuming your CSS is here
+import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -54,10 +54,10 @@ const services = [
 
 export default function Services() {
   AOS.init({
-    duration: 1000, // Animation duration
-    once: false, // Whether animation should happen only once
-    easing: "ease-in-out", // Smooth easing for animations
-    disable: "mobile", // Disable animations on mobile devices  // Disable animations on mobile devices
+    duration: 1000,
+    once: false,
+    easing: "ease-in-out",
+    disable: "mobile",
   });
 
   return (
@@ -72,8 +72,8 @@ export default function Services() {
             //   background: service.background,
             // }}
             data-aos="zoom-in"
-            data-aos-delay={index * 100} // Stagger animations
-            data-aos-duration="800" // Animation duration
+            data-aos-delay={index * 100}
+            data-aos-duration="800"
           >
             <div className="service-icon">{service.icon}</div>
             <h3 className="service-title">{service.title}</h3>

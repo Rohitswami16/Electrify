@@ -4,12 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Contact() {
-  // Initialize AOS for animations
   AOS.init({
-    duration: 1000, // Animation duration
-    once: false, // Whether animation should happen only once
-    easing: "ease-in-out", // Smooth easing for animations
-    disable: "mobile", // Disable animations on mobile devices  
+    duration: 1000,
+    once: false,
+    easing: "ease-in-out",
+    disable: "mobile",
   });
 
   return (

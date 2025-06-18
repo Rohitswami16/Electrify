@@ -22,7 +22,6 @@ import image3 from "../assets/image3.jpg";
 const images = [image1, image2, image3];
 
 // sliding images for products
-
 import ledBulbImg from "../product-images/led-bulb.jpeg";
 import switchboardImg from "../product-images/switch-board.jpeg";
 import extensionCordImg from "../product-images/extension-cord.jpeg";
@@ -32,7 +31,7 @@ import tableLampImg from "../product-images/table-lamp.jpeg";
 import powerstripImg from "../product-images/power-strip.jpeg";
 import tubeLightImg from "../product-images/tube-light.jpeg";
 import wallSocketImg from "../product-images/wall-socket.jpeg";
-import InverterBatteryImg from "../product-images/inverter-battery.jpeg";
+import InverterImg from "../product-images/inverter-battery.jpeg";
 import wiringCableImg from "../product-images/wiring-cable.jpeg";
 import electricKettleImg from "../product-images/electric-kettle.jpeg";
 import mcbSwitchImg from "../product-images/mcb-switch.jpeg";
@@ -49,12 +48,7 @@ const products = [
   { id: 7, name: "Power Strip", price: "₹400", image: powerstripImg },
   { id: 8, name: "Tube Light", price: "₹250", image: tubeLightImg },
   { id: 9, name: "Wall Socket", price: "₹180", image: wallSocketImg },
-  {
-    id: 10,
-    name: "Inverter Battery",
-    price: "₹6200",
-    image: InverterBatteryImg,
-  },
+  { id: 10, name: "Inverter Battery", price: "₹6200", image: InverterImg },
   { id: 11, name: "Wiring Cable", price: "₹950", image: wiringCableImg },
   { id: 12, name: "Electric Kettle", price: "₹1300", image: electricKettleImg },
   { id: 13, name: "MCB Switch", price: "₹300", image: mcbSwitchImg },
@@ -69,17 +63,17 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: false, 
+      duration: 1000,
+      once: false,
       easing: "ease-in-out",
-      disable: "mobile", // Disable animations on mobile devices
+      disable: "mobile",
     });
   }, []);
 
@@ -159,7 +153,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4))",
               color: "#111827",
             }}
-             data-aos="zoom-in"
+            data-aos="zoom-in"
           >
             <FaHeadset className="highlight-icon" />
             <h3>Expert Support</h3>
@@ -172,7 +166,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(249, 168, 212, 0.3) 0%, rgba(255, 192, 203, 0.3) 100%)",
               color: "#111827",
             }}
-             data-aos="zoom-in"
+            data-aos="zoom-in"
           >
             <FaShippingFast className="highlight-icon" />
             <h3>Fast Delivery</h3>
@@ -180,7 +174,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="home-stats"  data-aos="flip-up">
+        <div className="home-stats" data-aos="flip-up">
           <div className="stat-item">
             <FaAward className="stat-icon" />
             <h3>3+</h3>
