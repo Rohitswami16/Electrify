@@ -32,11 +32,11 @@ import powerstripImg from "../product-images/power-strip.jpeg";
 import tubeLightImg from "../product-images/tube-light.jpeg";
 import wallSocketImg from "../product-images/wall-socket.jpeg";
 import InverterImg from "../product-images/Inverter-Battery.jpeg";
-import wiringCableImg from "../product-images/wiring-cable.jpeg";
-import electricKettleImg from "../product-images/electric-kettle.jpeg";
-import mcbSwitchImg from "../product-images/mcb-switch.jpeg";
-import chargerAdapterImg from "../product-images/charger-adapter.jpeg";
-import smartPlugImg from "../product-images/smart-plug.jpeg";
+import wiringCableImg from "../product-images/Wiring-Cable.jpeg";
+import electricKettleImg from "../product-images/Electric-Kettle.jpeg";
+import mcbSwitchImg from "../product-images/MCB-Switch.jpeg";
+import chargerAdapterImg from "../product-images/Charger-Adapter.jpeg";
+import smartPlugImg from "../product-images/Smart-Plug.jpeg";
 
 const products = [
   { id: 1, name: "LED Bulb", price: "₹120", image: ledBulbImg },
