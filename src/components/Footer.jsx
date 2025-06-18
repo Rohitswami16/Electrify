@@ -19,15 +19,16 @@ export default function Footer() {
           <a href="/" className="footer-link">Home</a>
           <a href="/about" className="footer-link">About</a>
           <a href="/products" className="footer-link">Products</a>
+          <a href="/services" className='footer-link'>Services</a>
           <a href="/contact" className="footer-link">Contact</a>
         </div>
 
         {/* Legal Links */}
         <div className='footer-section'>
           <h3 className="footer-title">Legal</h3>
-          <a href="/privacy" className="footer-link">Privacy Policy</a>
-          <a href="/terms" className="footer-link">Terms & Conditions</a>
-          <a href="/returns" className="footer-link">Return Policy</a>
+          <a  className="footer-link">Privacy Policy</a>
+          <a  className="footer-link">Terms & Conditions</a>
+          <a  className="footer-link">Return Policy</a>
         </div>
 
         {/* Contact Info */}
@@ -40,7 +41,7 @@ export default function Footer() {
 
         {/* Social Links */}
         <div>
-          <h3 className="footer-title">Socials</h3>
+          <h3 className="footer-title">Connect With Us</h3>
           <div className="footer-socials">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedinIn /></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>

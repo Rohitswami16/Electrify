@@ -42,13 +42,13 @@ const products = [
 
 export default function Products() {
   return (
-    <>
+    <section className="products-section">
       <h2 className="product-heading">Products</h2>
       <div className="products-grid">
         {products.map((p) => (
           <ProductCard key={p.id} {...p} />
         ))}
       </div>
-    </>
+    </section>
   );
 }

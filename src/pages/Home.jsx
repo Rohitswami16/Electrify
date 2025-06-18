@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -8,6 +7,7 @@ import {
   FaAward,
   FaSmile,
   FaClock,
+  FaArrowRight,
 } from "react-icons/fa";
 import "../App.css";
 
@@ -49,11 +49,12 @@ export default function Home() {
             Your trusted source for electrical solutions
           </p>
         </div>
+        
         <button
           className="btn-exploreproduct"
           onClick={() => navigate("/products")}
         >
-          Explore Our Products
+          Explore Our Products <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
         </button>
       </div>
       <div className="home-info">

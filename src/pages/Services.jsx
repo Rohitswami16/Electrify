@@ -36,7 +36,7 @@ const services = [
 export default function Services() {
   return (
     <section className="services-section">
-      <h2 className="services-heading">⚡ Our Services</h2>
+      <h2 className="services-heading">Our Services</h2>
       <div className="services-grid">
         {services.map((service, index) => (
           <div key={index} className="service-card">
