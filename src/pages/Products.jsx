@@ -1,6 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import "../App.css"; // Import the global stylesheet
 
+
 import ledBulbImg from "../product-images/led-bulb.jpeg";
 import switchboardImg from "../product-images/switch-board.jpeg";
 import extensionCordImg from "../product-images/extension-cord.jpeg";
@@ -41,12 +42,13 @@ const products = [
 ];
 
 export default function Products() {
+  
   return (
     <section className="products-section">
       <h2 className="product-heading">Products</h2>
       <div className="products-grid">
         {products.map((p) => (
-          <ProductCard key={p.id} {...p} />
+          <ProductCard key={p.id} {...p}   />
         ))}
       </div>
     </section>

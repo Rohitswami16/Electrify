@@ -8,10 +8,13 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 export default function App() {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

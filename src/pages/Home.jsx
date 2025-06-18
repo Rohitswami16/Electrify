@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa";
 import "../App.css";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // Import images from assets
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
@@ -71,6 +74,15 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+      easing: "ease-in-out",
+      disable: "mobile", // Disable animations on mobile devices
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -127,14 +139,14 @@ export default function Home() {
         </p>
 
         <div className="info-highlights">
-          <div className="highlight"
-          
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(209, 250, 229, 0.4), rgba(167, 243, 208, 0.4))",
-            color: "#111827",
-          }}
-          
+          <div
+            className="highlight"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(209, 250, 229, 0.4), rgba(167, 243, 208, 0.4))",
+              color: "#111827",
+            }}
+            data-aos="zoom-in"
           >
             <FaCheckCircle className="highlight-icon" />
             <h3>Trusted Quality</h3>
@@ -147,6 +159,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4))",
               color: "#111827",
             }}
+             data-aos="zoom-in"
           >
             <FaHeadset className="highlight-icon" />
             <h3>Expert Support</h3>
@@ -159,6 +172,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(249, 168, 212, 0.3) 0%, rgba(255, 192, 203, 0.3) 100%)",
               color: "#111827",
             }}
+             data-aos="zoom-in"
           >
             <FaShippingFast className="highlight-icon" />
             <h3>Fast Delivery</h3>
@@ -166,7 +180,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="home-stats">
+        <div className="home-stats"  data-aos="flip-up">
           <div className="stat-item">
             <FaAward className="stat-icon" />
             <h3>3+</h3>
