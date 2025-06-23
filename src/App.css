@@ -137,7 +137,7 @@ html {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -155,7 +155,7 @@ html {
 }
 
 .btn-exploreproduct {
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -170,7 +170,7 @@ html {
 }
 
 .btn-exploreproduct:hover {
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
@@ -180,6 +180,7 @@ html {
   overflow: hidden;
   width: 100%;
   padding: 40px 30px;
+  /* background: linear-gradient(to right, #e0ecff, #f5f9ff); */
 }
 
 .slider-track {
@@ -187,6 +188,10 @@ html {
   width: max-content;
   animation: scroll-left 50s linear infinite;
   gap: 100px;
+}
+
+.slider-track {
+  background: transparent;
 }
 
 .slider-item {
@@ -230,8 +235,13 @@ html {
 }
 
 .home-info {
-  padding: 0 2rem;
-  background-color: rgba(255, 255, 255, 0.95);
+  /* padding-top: 10px; */
+  padding: 2rem 2rem;
+  /* background-color: rgba(255, 255, 255, 0.95); */
+
+  /* background: linear-gradient(to bottom, #f3f4f6, #ffffff); */
+  background: linear-gradient(to right, #e0ecff, #f5f9ff);
+
   text-align: center;
 }
 
@@ -328,7 +338,7 @@ html {
 /* About page styles */
 .about-section {
   padding: 60px 20px;
-  background: linear-gradient(to bottom, #f3f4f6, #ffffff);
+  /* background: linear-gradient(to bottom, #f3f4f6, #ffffff); */
   color: #111827;
 }
 

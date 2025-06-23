@@ -22,8 +22,16 @@ import image3 from "../assets/image3.jpg";
 const images = [image1, image2, image3];
 
 // sliding images for products
+import tvlg from "../product-images/tv-lg.jpg";
+import tvsamsung from "../product-images/tv-samsung.jpg";
+import refrigeratorlg from "../product-images/refrigerator-lg.jpg";
+import refrigeratorSamsung from "../product-images/refrigerator-samsung.jpg";
+import iphone16 from "../product-images/iphone-16.jpg";
+import sumsungs24 from "../product-images/samsung-s24-ultra.jpg"; 
+import washingMSamsung from "../product-images/washing-machine-2.jpg";
+import acWhirlpool from "../product-images/ac-wayfair.jpg";
+
 import ledBulbImg from "../product-images/led-bulb.jpeg";
-import switchboardImg from "../product-images/switch-board.jpeg";
 import extensionCordImg from "../product-images/extension-cord.jpeg";
 import ceilinngFanImg from "../product-images/ceiling-fan.jpeg";
 import electricIronImg from "../product-images/iron.jpeg";
@@ -39,21 +47,30 @@ import chargerAdapterImg from "../product-images/Charger-Adapter.jpeg";
 import smartPlugImg from "../product-images/Smart-Plug.jpeg";
 
 const products = [
-  { id: 1, name: "LED Bulb", price: "₹120", image: ledBulbImg },
-  { id: 2, name: "Switch Board", price: "₹450", image: switchboardImg },
-  { id: 3, name: "Extension Cord", price: "₹350", image: extensionCordImg },
-  { id: 4, name: "Ceiling Fan", price: "₹1500", image: ceilinngFanImg },
-  { id: 5, name: "Electric Iron", price: "₹999", image: electricIronImg },
-  { id: 6, name: "Table Lamp", price: "₹700", image: tableLampImg },
-  { id: 7, name: "Power Strip", price: "₹400", image: powerstripImg },
-  { id: 8, name: "Tube Light", price: "₹250", image: tubeLightImg },
-  { id: 9, name: "Wall Socket", price: "₹180", image: wallSocketImg },
-  { id: 10, name: "Inverter Battery", price: "₹6200", image: InverterImg },
-  { id: 11, name: "Wiring Cable", price: "₹950", image: wiringCableImg },
-  { id: 12, name: "Electric Kettle", price: "₹1300", image: electricKettleImg },
-  { id: 13, name: "MCB Switch", price: "₹300", image: mcbSwitchImg },
-  { id: 14, name: "Charger Adapter", price: "₹450", image: chargerAdapterImg },
-  { id: 15, name: "Smart Plug", price: "₹1500", image: smartPlugImg },
+
+  { id: 1, name: "LG TV 43 inch", image: tvlg },
+  { id: 2, name: "Samsung TV 55 inch", price: "₹65000", image: tvsamsung },
+  { id: 3, name: "LG Refrigerator", price: "₹30000", image: refrigeratorlg },
+  { id: 4, name: "Samsung Refrigerator", price: "₹35000", image: refrigeratorSamsung },
+  { id: 5, name: "iPhone 16", price: "₹120000", image: iphone16 },
+  { id: 6, name: "Samsung S24 Ultra", price: "₹140000", image: sumsungs24 },
+  { id: 7, name: "Washing Machine Samsung", price: "₹30000", image: washingMSamsung },
+  { id: 8, name: "Air Conditioner Whirlpool", price: "₹50000", image: acWhirlpool },
+  // electrical products
+  { id: 9, name: "LED Bulb", image: ledBulbImg },
+  { id: 10, name: "Extension Cord", image: extensionCordImg },
+  { id: 11, name: "Ceiling Fan", image: ceilinngFanImg },
+  { id: 12, name: "Electric Iron", image: electricIronImg },
+  { id: 13, name: "Table Lamp", image: tableLampImg },
+  { id: 14, name: "Power Strip", image: powerstripImg },
+  { id: 15, name: "Tube Light", image: tubeLightImg },
+  { id: 16, name: "Wall Socket", image: wallSocketImg },
+  { id: 17, name: "Inverter Battery", image: InverterImg },
+  { id: 18, name: "Wiring Cable", image: wiringCableImg },
+  { id: 19, name: "Electric Kettle", image: electricKettleImg },
+  { id: 20, name: "MCB Switch", image: mcbSwitchImg },
+  { id: 21, name: "Charger Adapter", image: chargerAdapterImg },
+  { id: 22, name: "Smart Plug", image: smartPlugImg },
 ];
 
 export default function Home() {
@@ -91,7 +108,7 @@ export default function Home() {
         }}
       >
         <div className="overlay">
-          <h1 className="home-title">Welcome to Electrify</h1>
+          <h1 className="home-title">Electrify</h1>
           <p className="home-subtitle">
             Your trusted source for electrical solutions
           </p>
@@ -108,6 +125,12 @@ export default function Home() {
           ))}
         </div>
 
+        
+      </div>
+
+      
+
+      <div className="home-info">
         <button
           className="btn-exploreproduct"
           onClick={() => navigate("/products")}
@@ -115,9 +138,6 @@ export default function Home() {
           Explore All Products{" "}
           <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
         </button>
-      </div>
-
-      <div className="home-info">
         <h2>Why Choose Electrify</h2>
         <p>
           At Electrify, we provide reliable electrical products with a focus on
