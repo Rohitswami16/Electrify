@@ -18,6 +18,12 @@ import "aos/dist/aos.css";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
+// import image4 from "../assets/image4.jpg";
+// import image5 from "../assets/image5.jpg";
+// import image6 from "../assets/image6.jpg";
+// import image7 from "../assets/image7.jpg";
+// import image8 from "../assets/image8.jpg";
+// import image9 from "../assets/image9.jpg";
 
 const images = [image1, image2, image3];
 
@@ -27,7 +33,7 @@ import tvsamsung from "../product-images/tv-samsung.jpg";
 import refrigeratorlg from "../product-images/refrigerator-lg.jpg";
 import refrigeratorSamsung from "../product-images/refrigerator-samsung.jpg";
 import iphone16 from "../product-images/iphone-16.jpg";
-import sumsungs24 from "../product-images/samsung-s24-ultra.jpg"; 
+import sumsungs24 from "../product-images/samsung-s24-ultra.jpg";
 import washingMSamsung from "../product-images/washing-machine-2.jpg";
 import acWhirlpool from "../product-images/ac-wayfair.jpg";
 
@@ -47,15 +53,29 @@ import chargerAdapterImg from "../product-images/Charger-Adapter.jpeg";
 import smartPlugImg from "../product-images/Smart-Plug.jpeg";
 
 const products = [
-
   { id: 1, name: "LG TV 43 inch", image: tvlg },
   { id: 2, name: "Samsung TV 55 inch", price: "₹65000", image: tvsamsung },
   { id: 3, name: "LG Refrigerator", price: "₹30000", image: refrigeratorlg },
-  { id: 4, name: "Samsung Refrigerator", price: "₹35000", image: refrigeratorSamsung },
+  {
+    id: 4,
+    name: "Samsung Refrigerator",
+    price: "₹35000",
+    image: refrigeratorSamsung,
+  },
   { id: 5, name: "iPhone 16", price: "₹120000", image: iphone16 },
   { id: 6, name: "Samsung S24 Ultra", price: "₹140000", image: sumsungs24 },
-  { id: 7, name: "Washing Machine Samsung", price: "₹30000", image: washingMSamsung },
-  { id: 8, name: "Air Conditioner Whirlpool", price: "₹50000", image: acWhirlpool },
+  {
+    id: 7,
+    name: "Washing Machine Samsung",
+    price: "₹30000",
+    image: washingMSamsung,
+  },
+  {
+    id: 8,
+    name: "Air Conditioner Whirlpool",
+    price: "₹50000",
+    image: acWhirlpool,
+  },
   // electrical products
   { id: 9, name: "LED Bulb", image: ledBulbImg },
   { id: 10, name: "Extension Cord", image: extensionCordImg },
@@ -102,7 +122,7 @@ export default function Home() {
           backgroundImage: `url(${images[currentImage]})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "70vh",
+          height: "50vh",
           width: "100%",
           transition: "background-image 1s ease-in-out",
         }}
@@ -124,22 +144,18 @@ export default function Home() {
             </div>
           ))}
         </div>
-
-        
       </div>
-
-      
-
       <div className="home-info">
         <button
           className="btn-exploreproduct"
           onClick={() => navigate("/products")}
+          data-aos="fade-up"
         >
-          Explore All Products{" "}
-          <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
+          Explore All Products
+          <FaArrowRight className="arrow-icon" />
         </button>
-        <h2>Why Choose Electrify</h2>
-        <p>
+        <h2 data-aos="fade-up">Why Choose Electrify</h2>
+        <p data-aos="fade-up">
           At Electrify, we provide reliable electrical products with a focus on
           quality and innovation. From home wiring essentials to
           industrial-grade components, we’ve got you covered.
@@ -190,24 +206,25 @@ export default function Home() {
         <button
           className="btn-exploreproduct"
           onClick={() => navigate("/services")}
+          data-aos="fade-up"
         >
-         Explore What We Offer{" "}
-          <FaArrowRight style={{ marginLeft: "8px", marginTop: "2px" }} />
+          Explore What We Offer
+          <FaArrowRight className="arrow-icon" />
         </button>
 
-        <div className="home-stats" data-aos="flip-up">
+        <div className="home-stats" data-aos="fade-up">
           <div className="stat-item">
-            <FaAward className="stat-icon" />
+            <FaAward className="highlight-icon" />
             <h3>3+</h3>
             <p>Decades of Experience</p>
           </div>
           <div className="stat-item">
-            <FaSmile className="stat-icon" />
+            <FaSmile className="highlight-icon" />
             <h3>100%</h3>
             <p>Customer Satisfaction</p>
           </div>
           <div className="stat-item">
-            <FaClock className="stat-icon" />
+            <FaClock className="highlight-icon" />
             <h3>99.9%</h3>
             <p>On-Time Delivery</p>
           </div>

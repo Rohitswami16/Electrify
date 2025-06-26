@@ -155,8 +155,11 @@ html {
 }
 
 .btn-exploreproduct {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: 
+    linear-gradient(135deg, rgba(114, 242, 176, 0.4), rgba(167, 243, 208, 0.4)),
+    linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4)),
+    linear-gradient(135deg, rgba(249, 168, 212, 0.3), rgba(255, 192, 203, 0.3));
+  color: black;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -167,13 +170,26 @@ html {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  margin-top: 2px;
 }
 
 .btn-exploreproduct:hover {
-  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
+
+.btn-exploreproduct:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
 
 /* slider */
 .home-sliding-images {
@@ -234,16 +250,28 @@ html {
   margin-top: 10px;
 }
 
-.home-info {
-  /* padding-top: 10px; */
+/* .home-info {
   padding: 2rem 2rem;
-  /* background-color: rgba(255, 255, 255, 0.95); */
 
-  /* background: linear-gradient(to bottom, #f3f4f6, #ffffff); */
   background: linear-gradient(to right, #e0ecff, #f5f9ff);
 
   text-align: center;
+} */
+
+.home-info {
+  padding: 2rem 2rem;
+
+  background: 
+    linear-gradient(to right, #e0ecff, #f5f9ff),
+    url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: auto;
+
+  text-align: center;
 }
+
 
 .home-info h2 {
   font-size: 2rem;
@@ -462,13 +490,29 @@ html {
 }
 
 /* products and services */
-.products-grid,
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Position 4th and 5th items in 2nd row, centered (columns 2 & 3) */
+.services-grid > *:nth-child(4) {
+  grid-column: 2/1;
+}
+
+.services-grid > *:nth-child(5) {
+  grid-column: 3/2;
 }
 
 @media (max-width: 992px) {

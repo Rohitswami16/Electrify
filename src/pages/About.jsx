@@ -46,15 +46,15 @@ export default function About() {
           {/* Owner Section */}
           <div className="owner-section">
             <h2 className="section-title">👨‍🔧 Meet the Owner</h2>
-            <div className="owner-details">
+            <div className="owner-details" >
               <img
                 src={ownerImg}
                 alt="Owner"
                 className="owner-image"
-                data-aos="zoom-in"
+                data-aos="fade-right"
               />
-              <div>
-                <p className="owner-description">
+              <div data-aos="fade-left" >
+                <p className="owner-description" >
                   Hi, I'm <strong>Owner Name</strong>, the proud founder of
                   Electrify. With over 15 years of hands-on experience in the
                   electrical industry, I started Electrify with the dream to
@@ -67,7 +67,7 @@ export default function About() {
           </div>
 
           {/* History Section */}
-          <div className="history-section">
+          <div className="history-section" data-aos="fade-up">
             <h2 className="section-title">🏠 Our Journey</h2>
             <p className="history-description">
               Electrify was founded in 2010 as a humble electrical supplies
