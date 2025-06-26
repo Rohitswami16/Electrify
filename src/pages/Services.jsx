@@ -19,7 +19,7 @@ const services = [
     background:
       "linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4))",
   },
- 
+
   {
     icon: "🔋",
     title: "Power Solutions",
@@ -74,6 +74,7 @@ export default function Services() {
           </div>
         ))}
       </div>
+      
     </section>
   );
 }

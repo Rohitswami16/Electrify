@@ -155,8 +155,11 @@ html {
 }
 
 .btn-exploreproduct {
-  background: 
-    linear-gradient(135deg, rgba(114, 242, 176, 0.4), rgba(167, 243, 208, 0.4)),
+  background: linear-gradient(
+      135deg,
+      rgba(114, 242, 176, 0.4),
+      rgba(167, 243, 208, 0.4)
+    ),
     linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4)),
     linear-gradient(135deg, rgba(249, 168, 212, 0.3), rgba(255, 192, 203, 0.3));
   color: black;
@@ -189,7 +192,6 @@ html {
 .btn-exploreproduct:hover .arrow-icon {
   transform: translateX(6px);
 }
-
 
 /* slider */
 .home-sliding-images {
@@ -261,9 +263,8 @@ html {
 .home-info {
   padding: 2rem 2rem;
 
-  background: 
-    linear-gradient(to right, #e0ecff, #f5f9ff),
-    url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  background: linear-gradient(to right, #e0ecff, #f5f9ff),
+    url("https://www.transparenttextures.com/patterns/white-wall-3.png");
 
   background-blend-mode: overlay;
   background-repeat: repeat;
@@ -271,7 +272,6 @@ html {
 
   text-align: center;
 }
-
 
 .home-info h2 {
   font-size: 2rem;
@@ -490,14 +490,7 @@ html {
 }
 
 /* products and services */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+.products-grid,
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -506,13 +499,13 @@ html {
   margin: 0 auto;
 }
 
-/* Position 4th and 5th items in 2nd row, centered (columns 2 & 3) */
-.services-grid > *:nth-child(4) {
-  grid-column: 2/1;
-}
-
-.services-grid > *:nth-child(5) {
-  grid-column: 3/2;
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
