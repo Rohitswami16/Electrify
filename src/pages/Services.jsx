@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 
 const services = [
   {
+    index: 0,
     icon: "🔧",
     title: "Installation Services",
     description:
@@ -11,7 +12,8 @@ const services = [
     background:
       "linear-gradient(135deg, rgba(221, 214, 243, 0.4), rgba(203, 195, 227, 0.4))",
   },
-  {
+  { 
+    index: 1,
     icon: "🛠️",
     title: "Repairs & Maintenance",
     description:
@@ -21,6 +23,7 @@ const services = [
   },
 
   {
+    index: 2,
     icon: "🔋",
     title: "Power Solutions",
     description:
@@ -29,6 +32,7 @@ const services = [
       "linear-gradient(135deg, rgba(173, 216, 230, 0.4), rgba(194, 233, 251, 0.4))",
   },
   {
+    index: 3,
     icon: "🏢",
     title: "Commercial Services",
     description: "Industrial wiring, office lighting, and camera power setup.",
@@ -36,6 +40,7 @@ const services = [
       "linear-gradient(135deg, rgba(255, 218, 185, 0.4), rgba(255, 203, 164, 0.4))",
   },
   {
+    index: 4,
     icon: "📦",
     title: "Delivery & Support",
     description:
@@ -61,12 +66,8 @@ export default function Services() {
           <div
             key={index}
             className="service-card"
-            // style={{
-            //   background: service.background,
-            // }}
             data-aos="zoom-in"
-            data-aos-delay={index * 100}
-            data-aos-duration="800"
+
           >
             <div className="service-icon">{service.icon}</div>
             <h3 className="service-title">{service.title}</h3>
@@ -74,7 +75,6 @@ export default function Services() {
           </div>
         ))}
       </div>
-      
     </section>
   );
 }

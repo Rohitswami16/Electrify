@@ -252,14 +252,6 @@ html {
   margin-top: 10px;
 }
 
-/* .home-info {
-  padding: 2rem 2rem;
-
-  background: linear-gradient(to right, #e0ecff, #f5f9ff);
-
-  text-align: center;
-} */
-
 .home-info {
   padding: 2rem 2rem;
 
@@ -292,7 +284,7 @@ html {
   margin: 2rem 0;
   flex-wrap: wrap;
   text-align: center;
-  gap: 1rem;
+  gap: 30px;
 }
 
 .highlight {
@@ -363,10 +355,38 @@ html {
   font-weight: bold;
 }
 
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(6px);
+  }
+}
+
+.arrow-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon:hover {
+  animation: slideRight 0.3s forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(6px);
+  }
+}
+
+
+
 /* About page styles */
 .about-section {
   padding: 60px 20px;
-  /* background: linear-gradient(to bottom, #f3f4f6, #ffffff); */
   color: #111827;
 }
 
@@ -454,44 +474,8 @@ html {
   margin: auto;
 }
 
-/* Product card styles */
-
-.product-card {
-  background-color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  border: 1px solid #e5e7eb;
-  transition: transform 0.2s ease;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-.product-image {
-  width: 100%;
-  height: 10rem;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
-.product-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.product-price {
-  color: #4b5563;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 /* products and services */
-.products-grid,
-.services-grid {
+.products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -499,25 +483,23 @@ html {
   margin: 0 auto;
 }
 
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 992px) {
-  .products-grid,
-  .services-grid {
+  .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .products-grid,
-  .services-grid {
+  .products-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -541,30 +523,93 @@ html {
   color: #1e3a8a;
 }
 
+.product-card {
+  background: white;
+  padding: 0.5rem;
+  max-width: 360px;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.product-card:hover {
+  /* transform: translateY(-8px); */
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  border-color: #d1d5db;
+}
+
+.product-image {
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.product-price {
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .service-card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #ffffff, #eaf2ff);
+  padding: 2rem;
+  max-width: 360px;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  border-color: #d1d5db;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .service-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 
+/*
 .service-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 6px;
   color: #1e3a8a;
-}
+} */
 
 .service-description {
   font-size: 1rem;

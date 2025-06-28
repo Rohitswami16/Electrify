@@ -15,9 +15,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import images from assets
-import image1 from "../assets/image1.jpg";
+// import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.jpg";
+// import image3 from "../assets/image3.jpg";
 // import image4 from "../assets/image4.jpg";
 // import image5 from "../assets/image5.jpg";
 // import image6 from "../assets/image6.jpg";
@@ -25,7 +25,7 @@ import image3 from "../assets/image3.jpg";
 // import image8 from "../assets/image8.jpg";
 // import image9 from "../assets/image9.jpg";
 
-const images = [image1, image2, image3];
+const images = [ image2 ];
 
 // sliding images for products
 import tvlg from "../product-images/tv-lg.jpg";
