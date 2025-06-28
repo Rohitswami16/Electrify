@@ -7,6 +7,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .navbar {
@@ -179,10 +181,6 @@ html {
   gap: 8px;
 }
 
-.arrow-icon {
-  transition: transform 0.3s ease;
-  margin-top: 2px;
-}
 
 .btn-exploreproduct:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
@@ -355,15 +353,6 @@ html {
   font-weight: bold;
 }
 
-@keyframes slideRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(6px);
-  }
-}
-
 .arrow-icon {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -381,8 +370,6 @@ html {
     transform: translateX(6px);
   }
 }
-
-
 
 /* About page styles */
 .about-section {
@@ -513,14 +500,23 @@ html {
   text-align: center;
 }
 
+.home-title,
 .about-title,
 .contact-title,
 .product-heading,
 .services-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 40px;
-  color: #1e3a8a;
+  /* color: #1e3a8a; */
+  /* Gradient text */
+  background: linear-gradient(to right bottom, #8b5cf6, #f43f5e); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
 }
 
 .product-card {
@@ -577,6 +573,7 @@ html {
   cursor: pointer;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+
 }
 
 .service-card:hover {
@@ -601,7 +598,29 @@ html {
 .service-icon {
   font-size: 2rem;
   margin-bottom: 8px;
+  padding: 12px;
+  color: #222; /* Set this to a consistent contrast color like #222 or #000 */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 248, 255, 0.8));
 }
+
+.service-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* deeper shadow on hover */
+}
+
+/* .service-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+} */
 
 /*
 .service-title {
@@ -611,11 +630,11 @@ html {
   color: #1e3a8a;
 } */
 
-.service-description {
+/* .service-description {
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.5;
-}
+} */
 
 /* Contact Page Styles */
 

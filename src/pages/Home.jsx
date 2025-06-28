@@ -154,7 +154,7 @@ export default function Home() {
           Explore All Products
           <FaArrowRight className="arrow-icon" />
         </button>
-        <h2 data-aos="fade-up">Why Choose Electrify</h2>
+        <h2 data-aos="fade-up"  >Why Choose Electrify</h2>
         <p data-aos="fade-up">
           At Electrify, we provide reliable electrical products with a focus on
           quality and innovation. From home wiring essentials to
@@ -169,7 +169,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(209, 250, 229, 0.4), rgba(167, 243, 208, 0.4))",
               color: "#111827",
             }}
-            data-aos="zoom-in"
+            data-aos="fade-up"
           >
             <FaCheckCircle className="highlight-icon" />
             <h3>Trusted Quality</h3>
@@ -182,7 +182,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4))",
               color: "#111827",
             }}
-            data-aos="zoom-in"
+            data-aos="fade-up"
           >
             <FaHeadset className="highlight-icon" />
             <h3>Expert Support</h3>
@@ -195,7 +195,7 @@ export default function Home() {
                 "linear-gradient(135deg, rgba(249, 168, 212, 0.3) 0%, rgba(255, 192, 203, 0.3) 100%)",
               color: "#111827",
             }}
-            data-aos="zoom-in"
+            data-aos="fade-up"
           >
             <FaShippingFast className="highlight-icon" />
             <h3>Fast Delivery</h3>

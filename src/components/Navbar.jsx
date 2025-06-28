@@ -47,7 +47,7 @@ export default function Navbar() {
           className="nav-link"
           onClick={() => setMenuOpen(false)}
         >
-          Contact
+          Contact Us
         </Link>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import "../App.css";
+import { useState } from "react";
 
 // tv
 import tv1 from "../product-images/tv1.jpg";
@@ -103,5 +104,7 @@ export default function Products() {
         ))}
       </div>
     </section>
+    
   );
 }
+
