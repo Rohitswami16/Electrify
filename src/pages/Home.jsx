@@ -154,7 +154,7 @@ export default function Home() {
           Explore All Products
           <FaArrowRight className="arrow-icon" />
         </button>
-        <h2 data-aos="fade-up">Why Choose Electrify</h2>
+        <h2 data-aos="fade-up" className="home-title">Why Choose Electrify</h2>
         <p data-aos="fade-up">
           At Electrify, we provide reliable electrical products with a focus on
           quality and innovation. From home wiring essentials to
