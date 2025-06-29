@@ -7,8 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar {
@@ -157,13 +156,22 @@ html {
 }
 
 .btn-exploreproduct {
-  background: linear-gradient(
+  background-image: linear-gradient(
       135deg,
-      rgba(114, 242, 176, 0.4),
-      rgba(167, 243, 208, 0.4)
+      rgba(249, 168, 212, 0.5) 0%,
+      rgba(255, 230, 240, 0.25) 100%
     ),
-    linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4)),
-    linear-gradient(135deg, rgba(249, 168, 212, 0.3), rgba(255, 192, 203, 0.3));
+    linear-gradient(
+      135deg,
+      rgba(255, 236, 179, 0.6) 0%,
+      rgba(255, 255, 220, 0.25) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(114, 242, 176, 0.5) 0%,
+      rgba(200, 255, 230, 0.2) 100%
+    );
+
   color: black;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -171,7 +179,8 @@ html {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -181,10 +190,14 @@ html {
   gap: 8px;
 }
 
-
 .btn-exploreproduct:hover {
+  transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-  transform: translateY(-2px);
+}
+
+/* ✅ Add transition to icon so it moves smoothly */
+.btn-exploreproduct .arrow-icon {
+  transition: transform 0.3s ease;
 }
 
 .btn-exploreproduct:hover .arrow-icon {
@@ -196,7 +209,6 @@ html {
   overflow: hidden;
   width: 100%;
   padding: 40px 30px;
-  /* background: linear-gradient(to right, #e0ecff, #f5f9ff); */
 }
 
 .slider-track {
@@ -251,16 +263,19 @@ html {
 }
 
 .home-info {
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
+  min-height: 300px;
 
-  background: linear-gradient(to right, #e0ecff, #f5f9ff),
-    url("https://www.transparenttextures.com/patterns/white-wall-3.png");
-
-  background-blend-mode: overlay;
+  background-image: url("https://www.transparenttextures.com/patterns/white-wall-3.png"),
+    linear-gradient(to right, #e0ecff, #f5f9ff);
+  background-blend-mode: multiply;
   background-repeat: repeat;
   background-size: auto;
 
   text-align: center;
+  /* border-radius: 1rem; */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 .home-info h2 {
@@ -289,40 +304,60 @@ html {
   flex: 1;
   padding: 1rem;
   min-width: 150px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.3); /* ✅ fixed */
   border-radius: 15px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* ✅ subtle background for glass effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .highlight:hover {
-  transform: translateY(-15px);
+  transform: scale(1.05); /* Slightly reduced for smoother UX */
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
 }
 
 .highlight-icon {
   font-size: 2rem;
-  color: #1597fa;
+  color: #292929;
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* filter: drop-shadow(0 2px 4px rgba(21, 151, 250, 0.5)); */
+  cursor: pointer;
+}
+
+.highlight-icon:hover {
+  /* color: #0d74d1; */
+  transform: scale(1.1);
 }
 
 .home-stats {
   max-width: 900px;
   margin: 3rem auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   flex-wrap: wrap;
   border-radius: 20px;
   padding: 2rem;
   background: linear-gradient(
     135deg,
-    rgba(161, 196, 253, 0.3) 0%,
-    rgba(194, 233, 251, 0.3) 100%
+    rgba(161, 196, 253, 0.8) 0%,
+    rgba(230, 245, 255, 0.3) 100%
   );
+
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
@@ -510,7 +545,7 @@ html {
   margin-bottom: 40px;
   /* color: #1e3a8a; */
   /* Gradient text */
-  background: linear-gradient(to right bottom, #8b5cf6, #f43f5e); 
+  background: linear-gradient(to right bottom, #8b5cf6, #f43f5e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -573,7 +608,6 @@ html {
   cursor: pointer;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
 }
 
 .service-card:hover {
@@ -609,7 +643,11 @@ html {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 248, 255, 0.8));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(240, 248, 255, 0.8)
+  );
 }
 
 .service-icon:hover {
@@ -802,7 +840,8 @@ html {
   display: inline-block;
   margin-bottom: 10px;
   padding-bottom: 2px;
-  transition: color 0.3s ease;
+
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-link::after {
@@ -810,18 +849,22 @@ html {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0%;
+  width: 100%;
   height: 2px;
   background-color: #facc15;
-  transition: width 0.3s ease;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .footer-link:hover {
   color: #facc15;
+  transform: translateX(4px);
 }
 
 .footer-link:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 .footer-contact {

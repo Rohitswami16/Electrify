@@ -25,7 +25,7 @@ import image2 from "../assets/image2.jpg";
 // import image8 from "../assets/image8.jpg";
 // import image9 from "../assets/image9.jpg";
 
-const images = [ image2 ];
+const images = [image2];
 
 // sliding images for products
 import tvlg from "../product-images/tv-lg.jpg";
@@ -154,7 +154,7 @@ export default function Home() {
           Explore All Products
           <FaArrowRight className="arrow-icon" />
         </button>
-        <h2 data-aos="fade-up"  >Why Choose Electrify</h2>
+        <h2 data-aos="fade-up">Why Choose Electrify</h2>
         <p data-aos="fade-up">
           At Electrify, we provide reliable electrical products with a focus on
           quality and innovation. From home wiring essentials to
@@ -166,7 +166,7 @@ export default function Home() {
             className="highlight"
             style={{
               background:
-                "linear-gradient(135deg, rgba(209, 250, 229, 0.4), rgba(167, 243, 208, 0.4))",
+                "linear-gradient(135deg, rgba(167, 243, 208, 0.9) 0%, rgba(235, 255, 245, 0.5) 100%)",
               color: "#111827",
             }}
             data-aos="fade-up"
@@ -179,7 +179,7 @@ export default function Home() {
             className="highlight"
             style={{
               background:
-                "linear-gradient(135deg, rgba(255, 249, 196, 0.4), rgba(255, 236, 179, 0.4))",
+                "linear-gradient(135deg, rgba(255, 236, 179, 0.8) 0%, rgba(255, 255, 225, 0.3) 100%)",
               color: "#111827",
             }}
             data-aos="fade-up"
@@ -192,7 +192,7 @@ export default function Home() {
             className="highlight"
             style={{
               background:
-                "linear-gradient(135deg, rgba(249, 168, 212, 0.3) 0%, rgba(255, 192, 203, 0.3) 100%)",
+                "linear-gradient(135deg, rgba(249, 168, 212, 0.85) 0%, rgba(255, 240, 245, 0.3) 100%)",
               color: "#111827",
             }}
             data-aos="fade-up"

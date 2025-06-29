@@ -1,24 +1,31 @@
 import "../../src/App.css";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Footer() {
-
   useEffect(() => {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        easing: "ease-in-out",
-        disable: "mobile",
-      });
-    }, []);
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: "ease-in-out",
+      disable: "mobile",
+    });
+  }, []);
 
   return (
     <footer className="footer-container">
-      <div className="footer-content" >
+      <div className="footer-content">
         {/* Brand */}
         <div data-aos="fade-left">
           <h2 className="footer-brand">⚡Electrify</h2>
@@ -59,9 +66,26 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="footer-section" data-aos="fade-left">
           <h3 className="footer-title">Contact Us</h3>
-          <p className="footer-contact">📍 Bengaluru, Karnataka</p>
-          <p className="footer-contact">📞 +91 9876543210</p>
-          <p className="footer-contact">✉️ support@electrify.com</p>
+
+          <p className="footer-contact">
+            <FaMapMarkerAlt style={{ marginRight: "8px" }} />
+            Bengaluru, Karnataka
+          </p>
+
+          <p className="footer-contact">
+            <FaPhoneAlt style={{ marginRight: "8px" }} />
+            +91 9876543210
+          </p>
+
+          <p className="footer-contact">
+            <FaEnvelope style={{ marginRight: "8px" }} />
+            support@electrify.com
+          </p>
+
+          <p className="footer-contact">
+            <FaClock style={{ marginRight: "8px" }} />
+            Mon–Fri: 9 AM – 9 PM
+          </p>
         </div>
 
         {/* Social Links */}
